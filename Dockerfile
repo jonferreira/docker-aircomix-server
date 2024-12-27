@@ -4,15 +4,15 @@ MAINTAINER drs@drs.pe.kr
 RUN apk update
 
 # 언어 설정
-ENV LANG ko_KR.UTF-8
-ENV LANGUAGE ko_KR.UTF-8
-ENV LC_ALL ko_KR.UTF-8
+ENV LANG en_US.UTF-8
+ENV LANGUAGE en_US.UTF-8
+ENV LC_ALL en_US.UTF-8
 
 # TimeZone 설정
-ENV TZ Asia/Seoul
+ENV TZ Europe/Lisbon
 
 # 2. apache php 설치
-RUN apk add php5-apache2 php5-zip apache2-utils
+RUN apk add php7-apache2 php7-zip apache2-utils
 
 # 3. 필요파일 복사
 COPY ./comix-server /data/comix-server
