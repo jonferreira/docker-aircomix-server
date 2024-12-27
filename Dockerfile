@@ -1,6 +1,5 @@
 # 1. alpine 설치 (패키지 업데이트 + 만든사람 표시)
 FROM php:7.4-fpm-alpine
-MAINTAINER drs@drs.pe.kr
 RUN apk update
 
 # 언어 설정
