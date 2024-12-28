@@ -1,6 +1,6 @@
 # 1. alpine 설치 (패키지 업데이트 + 만든사람 표시)
 FROM php:8.2-apache
-RUN apk update
+# RUN apk update
 
 # 언어 설정
 ENV LANG en_US.UTF-8
@@ -17,7 +17,7 @@ RUN pecl -v install rar
 # 3. 필요파일 복사
 COPY ./comix-server /data/comix-server
 COPY ./conf/comix.conf /etc/apache2/conf.d
-COPY ./docker-entrypoint.sh /
+# COPY ./docker-entrypoint.sh /
 RUN chmod 755 /docker-entrypoint.sh
 
 # 4. 아파치 수정
